@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Amatic SC';
+  src: url("./assets/fonts/AmaticSC-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Amatic SC';
+}
+
+.header {
+  font-size: 1.5rem;
+}
+
+.mem-container {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.mem-title {
+  margin: 12px 0;
+  font-size: 3rem;
+}
+
+.mem-line {
+  height: 2px;
+  width: 98%;
+  margin: 0 auto;
+  background-color: #B0B0B0;
+}
+
+.mem-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow-btn {
+  width: 25px;
+  height: 25px;
+  margin-right: 1rem;
+  transition: all .35s;
+}
+
+.mem-img {
+  width: 0;
+  height: 0;
+  transition: all .45s;
+}
+
+.mem-item-title {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  color:rgb(21, 21, 211);
+  transition: all .45s;
+}
+
+.mem-item {
+  border-radius: 15px;
+  background-color: #f0f8ff;
+}
+
+.mem-input:checked~label .mem-img,
+.mem-item:hover .mem-img {
+  width: 50%;
+  height: 50%;
+  padding: 10px 0;
+}
+
+.mem-input:checked~label .arrow-btn,
+.mem-item:hover .arrow-btn {
+  transform: rotate(-180deg);
+}
+
+.mem-input:checked~label .mem-item-title,
+.mem-container:hover .mem-item-title {
+  color: black;
+}
+
+.mem-item,
+.mem-btn,
+.mem-img {
+  cursor: pointer;
+}
+
+.header,
+.mem-container,
+.mem-title {
+  text-align: center;
+}
+
+.mem-container:hover .arrow-btn {
+  background: url('./assets/svg/arrow.svg') center/cover no-repeat;
+}
